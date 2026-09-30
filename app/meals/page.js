@@ -8,15 +8,15 @@ export default async function MealsPage() {
     const meals = await getMeals();
 
     return <>
-        <header className={classes.header}></header>
-        <h1>
-            Delicious Meals, created <span className={classes.highlight}>by you</span>
-        </h1>
-        <p> Choose your favorite meals and cook them yourself</p>
-        <p className={classes.cta}>
-            <Link href="/meals/share">Share you favorite meals
-            </Link>
-        </p>
+        <header className={classes.header}>
+            <h1>
+                Delicious Meals, created <span className={classes.highlight}>by you</span>
+            </h1>
+            <p>Choose your favorite meals and cook them yourself</p>
+            <p className={classes.cta}>
+                <Link href="/meals/share">Share your favorite meals</Link>
+            </p>
+        </header>
         <main className={classes.main}>
             <MealsGrid meals={meals} />
         </main>

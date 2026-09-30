@@ -6,10 +6,6 @@ export default async function MealDetailsPage({params}) {
     const { mealSlug } = await params;
     const meal = getMeal(mealSlug);
 
-    if (!meal) {
-        notFound();
-    }
-
     meal.instructions = meal.instructions.replace(/\n/g, '<br />');
 
     return (
